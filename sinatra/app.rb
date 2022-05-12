@@ -9,7 +9,20 @@ get '/secret' do
    'Hello Bradley'
 end
 
-get '/cat'do
+get '/random_cat'do
 	@name = ["Amigo", "Misty", "Almond"].sample	
 	erb(:index)
 end
+
+post '/named-cat'do
+	@name = params[:name]	
+	erb(:index)
+end
+
+get '/form' do
+	erb(:form)
+end
+end
+
+
+	
